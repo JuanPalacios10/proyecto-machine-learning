@@ -1,6 +1,9 @@
 joblib==1.5.1
+narwhals==1.41.0
 numpy==2.2.6
+packaging==25.0
 pandas==2.2.3
+plotly==6.1.2
 python-dateutil==2.9.0.post0
 pytz==2025.2
 scikit-learn==1.6.1
