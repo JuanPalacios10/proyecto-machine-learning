@@ -1,5 +1,22 @@
+from enum import Enum
 import pandas as pd
 import os
+
+
+class PokemonStats(str, Enum):
+    POKEDEX = "#"
+    NAME = "Name"
+    TYPE_1 = "Type 1"
+    TYPE_2 = "Type 2"
+    TOTAL = "Total"
+    HP = "HP"
+    ATTACK = "Attack"
+    DEFENSE = "Defense"
+    SPECIAL_ATTACK = "Sp. Atk"
+    SPECIAL_DEFENSE = "Sp. Def"
+    SPEED = "Speed"
+    GENERATION = "Generation"
+    LEGENDARY = "Legendary"
 
 
 class SingletonMeta(type):
@@ -19,13 +36,19 @@ class PokemonDataset(metaclass=SingletonMeta):
     )
 
     def get_columns(self, columns: list[str]) -> pd.DataFrame:
-        return self.__pokemon_dataset[columns]
+        return self.__pokemon_dataset.loc[:, columns]
+
+    def get_all_stats(self) -> pd.DataFrame:
+        return self.get_columns(
+            [
+                PokemonStats.HP.value,
+                PokemonStats.ATTACK.value,
+                PokemonStats.DEFENSE.value,
+                PokemonStats.SPECIAL_ATTACK.value,
+                PokemonStats.SPECIAL_DEFENSE.value,
+                PokemonStats.SPEED.value,
+            ]
+        )
 
     def get_all_pokemons(self) -> pd.DataFrame:
-        return self.__pokemon_dataset
-    
-    def get_column(self, column: str) -> pd.Series:
-        return self.__pokemon_dataset[column]
-
-    def get_column_by_index(self, column: str ,index: int) -> pd.Series:
-        return self.__pokemon_dataset[column][index]
+        return self.__pokemon_dataset.copy()
