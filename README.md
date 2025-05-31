@@ -9,7 +9,7 @@ Este proyecto implementa un programa en Python que utiliza el algoritmo de K-Mea
 El análisis se complementa con visualizaciones que permiten interpretar de forma clara los resultados y entender la distribución de los grupos generados.
 
 Dataset utilizado:
-📊 Pokemon Dataset – abcsds (Kaggle)
+📊 [Pokemon Dataset – abcsds (Kaggle)](https://www.kaggle.com/datasets/abcsds/pokemon)
 
 ## Pasos para ejecutar el proyecto
 
