@@ -32,7 +32,7 @@ class Clusters:
             return self
 
         columns = self.__stats.drop(columns="cluster").columns.tolist()
-        title = f"Pokemos agrupados por Cluster de acuerdo a {', '.join(columns)}"
+        title = f"Pokemons agrupados por Cluster de acuerdo a {', '.join(columns)}"
 
         if len(columns) == 2:
             self.__graphing_2d_cluster(
