@@ -2,6 +2,15 @@
 
 **Integrantes:** Juan Miguel Palacios Doncel, Nicolas Rodriguez Romero y Jhon Alexis Ruiz Quintero
 
+## Clasificación de Pokémons con K-Means
+
+Este proyecto implementa un programa en Python que utiliza el algoritmo de K-Means para agrupar Pokémon según sus estadísticas base. El objetivo es descubrir patrones ocultos en los datos mediante técnicas de aprendizaje no supervisado.
+
+El análisis se complementa con visualizaciones que permiten interpretar de forma clara los resultados y entender la distribución de los grupos generados.
+
+Dataset utilizado:
+📊 Pokemon Dataset – abcsds (Kaggle)
+
 ## Pasos para ejecutar el proyecto
 
 Para correr el proyecto, asegúrate de tener instalado Python 3.9 o superior
